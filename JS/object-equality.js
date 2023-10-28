@@ -16,7 +16,7 @@ function deepEqual(obj1, obj2) {
     }
 
     for (let key of keys1) {
-        if (!obj2.hasOwnProperty(key) || !deepEqual(obj1[key], obj2[key])) {
+        if (!obj1.hasOwnProperty(key) || !obj2.hasOwnProperty(key) || !deepEqual(obj1[key], obj2[key])) {
             return false;
         }
     }
